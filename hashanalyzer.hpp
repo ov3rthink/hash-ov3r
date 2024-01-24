@@ -2,6 +2,7 @@
 #include <string>
 #include <termcolor>
 #include <cctypes>
+#include <termcolor.hpp>
 
 class Hash {
 	public :
