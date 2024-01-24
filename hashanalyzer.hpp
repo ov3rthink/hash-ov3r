@@ -1,39 +1,42 @@
 #include <iostream>
 #include <string>
-#include <termcolor>
-#include <cctypes>
+#include <cctype>
 #include <termcolor.hpp>
 
-class Hash {
-	public :
-		void setHashProperties(char **);
 
-	        std::string hash;
-	        bool numeric;
-        	bool useLetter;
-	        bool letterLowercase;
-	        bool letterUppercase;
-	        bool specialChar;
+
+class Hash {
+public:
+    void SetHashProperties(const std::string& str);
+
+    std::string hash;
+    bool numeric;
+    bool useLetter;
+    bool letterLowercase;
+    bool letterUppercase;
+    bool specialChar;
 };
 
+void Hash::SetHashProperties(const std::string& str) {
+    hash = str;
+    numeric = false;
+    useLetter = false;
+    letterLowercase = false;
+    letterUppercase = false;
+    specialChar = false;
 
-void Hash::SetHashProperties(char ** StringHash){
-	hash = StringHash; 
-	for (char character : hash){
-		if (isalpha(character)) {
-                	useLetter = true;
-			if (isupper(character)) {
-                	        letterUppercase = true;
-        	        }else {
-                        	letterLowercase = true;
-			}
-
-                } else if (isdigit(character)) {
-                    numeric = true;
-                } else if (!isalnum(character)) {
-                    specialChar = true;
-                }
-
-	}
+    for (char character : hash) {
+        if (std::isalpha(character)) {
+            useLetter = true;
+            if (std::isupper(character)) {
+                letterUppercase = true;
+            } else {
+                letterLowercase = true;
+            }
+        } else if (std::isdigit(character)) {
+            numeric = true;
+        } else if (!std::isalnum(character)) {
+            specialChar = true;
+        }
+    }
 }
-
