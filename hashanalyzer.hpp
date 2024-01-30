@@ -5,11 +5,11 @@
 #include <termcolor.hpp>
 
 void HashWarning(void){
-	std::cout << termcolor::on_red <<  "[!] Unidentified hash " << termcolor::reset << std::endl;
+	std::cout << termcolor::on_red << "¬ Unidentified hash " << termcolor::reset << std::endl;
 }
 
 void OutputProgram(std::string PossibleHashs){
-	std::cout << termcolor::on_red << "[+] " << PossibleHashs << termcolor::reset << std::endl;
+	std::cout << termcolor::on_red << " ¬ " << PossibleHashs << termcolor::reset << std::endl;
 }
 
 void Hash(const std::string& str) {
@@ -44,7 +44,7 @@ void Hash(const std::string& str) {
 
 			else if(str.size() == 8 ){
 				if ( UseSpecialChar ){ 
-					OutputProgram ("[+] CRC-32 | ADLER-32, CRC-32B | XOR-32 | GHas-32-3 | GHash-32-5" );
+					OutputProgram (" CRC-32 | ADLER-32, CRC-32B | XOR-32 | GHas-32-3 | GHash-32-5" );
 				} else {
 					HashWarning();
 				}
@@ -60,75 +60,75 @@ void Hash(const std::string& str) {
 			}
 
 			else if (str.size() == 16 ){
-				OutputProgram("[+] MD5(Half) | MD5(Middle) | MySQL");
+				OutputProgram(" MD5(Half) | MD5(Middle) | MySQL");
 			}
 
 			else if (str.size() == 32){
-				OutputProgram("[+] Haval-128 | MD2 |  MD4 |  MD5 | NTLM |  RAdmin v2.x |  RipeMD-128 |  SNEFRU-128 |  Tiger-128 ");
+				OutputProgram(" Haval-128 | MD2 |  MD4 |  MD5 | NTLM |  RAdmin v2.x |  RipeMD-128 |  SNEFRU-128 |  Tiger-128 ");
 			}
 
 			else if (str.size() == 34 ){
 				if ( UseSpecialChar ){
-					OutputProgram("[+] MD5 |  Lineage II C4");
+					OutputProgram(" MD5 |  Lineage II C4");
 				}
 			}
 
 			else if (str.size() == 37){
 				if ( UseSpecialChar ){
-					OutputProgram("[+] MD5 ");
+					OutputProgram(" MD5 ");
 				}
 			}
 
 			else if (str.size() == 40){
-				OutputProgram("[+] Haval-160, MySQL5 | MySQL5 - SHA-1 | MySQL 160bit | RipeMD-160 | Tiger-160");			
+				OutputProgram(" Haval-160, MySQL5 | MySQL5 - SHA-1 | MySQL 160bit | RipeMD-160 | Tiger-160");			
 			}
 
 			else if (str.size() == 48) {
-				OutputProgram("[+] Haval-160 | Tiger-192 ");
+				OutputProgram(" Haval-160 | Tiger-192 ");
 				
 			}
 
 			else if (str.size() == 49){
 				if ( UseSpecialChar ){
-					OutputProgram("[+] MD5 | Joomla ");
+					OutputProgram(" MD5 | Joomla ");
 				}else {
 					HashWarning();
 				}
 			}
 
 			else if (str.size() == 52){
-				OutputProgram("[+] SHA-1 ");
+				OutputProgram(" SHA-1 ");
 			}
 
 			else if (str.size() == 56){
 				if ( UseSpecialChar ){
-					OutputProgram("[+]  Haval-224 | SHA-224 | Haval-256 | GOST R 34.11-94 | RipeMD-256 | SNEFRU-256 | SHA-256");
+					OutputProgram("  Haval-224 | SHA-224 | Haval-256 | GOST R 34.11-94 | RipeMD-256 | SNEFRU-256 | SHA-256");
 				} 
 			}
 
 			else if (str.size() == 57){
 				if ( UseSpecialChar ) {
-					OutputProgram("[+]  MD5 | Joomla ");
+					OutputProgram(" MD5 | Joomla ");
 				} else {
 					HashWarning();
 				}
 			}
 
 			else if (str.size() == 58){
-				OutputProgram("[+] SHA-256 ");
+				OutputProgram(" SHA-256 ");
 			}
 
 			else if (str.size() == 65){
-				OutputProgram("[+] SAM ");
+				OutputProgram(" SAM ");
 			}
 
 			else if(str.size() == 118){
-				OutputProgram("[+] RideMD-320 ");
+				OutputProgram(" RideMD-320 ");
 			}
 
 			else if(str.size() == 119){
 				if (UseSpecialChar ) {
-					OutputProgram("[+] Sha-384 ");
+					OutputProgram(" Sha-384 ");
 				} else {
 					HashWarning();
 				}

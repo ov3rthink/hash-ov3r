@@ -25,9 +25,8 @@ int main(int argc, char** argv) {
                 return 1;
             }
         }
-
-        for (int i = 0; i < argc-1; i++ ) {
-		std::cout << termcolor::on_red << "[+]-" << i << " " << argv[i] << termcolor::reset << std::endl;
+        for (int i = 1; i < argc; i++ ) {
+		std::cout << termcolor::on_red << i << " " << argv[i];
 		Hash(argv[i]);
 	}
     }
